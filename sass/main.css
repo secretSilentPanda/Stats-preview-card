@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #090b1a;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  max-width: 400px;
+  margin: 1em auto;
+}
+
+.card {
+  border-radius: 10px;
+  margin: 1em;
+  background-color: #1b1938;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: white;
+}
+
+.image {
+  background: url("../images/image-header-mobile.jpg") center/cover;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border-radius: 10px 10px 0 0;
+}
+.image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 21, 107, 0.589);
+}
+
+.contents .heading {
+  padding: 1em;
+}
+.contents .heading span {
+  color: #aa5cdb;
+}
+.contents p {
+  color: rgba(177, 169, 169, 0.75);
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+.contents .stats {
+  text-transform: uppercase;
+  padding: 2em;
+}
+.contents .stats .stat-item {
+  padding: 0.5em;
+}
+.contents .stats .stat-item .number {
+  font-weight: 700;
+  color: white;
+}
+.contents .stats .stat-item .category {
+  font-size: 0.6em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 450px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    max-width: 1000px;
+    height: 350px;
+  }
+
+  .card {
+    flex-direction: row-reverse;
+    height: 100%;
+    margin: 1em;
+    padding: 0;
+  }
+
+  .image {
+    flex: 1;
+    background: url("../images/image-header-desktop.jpg") center/cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 0 10px 10px 0;
+  }
+  .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(58, 21, 107, 0.589);
+  }
+
+  .contents {
+    padding-left: 4em;
+    flex: 1;
+    height: 100%;
+    text-align: left;
+  }
+  .contents .heading {
+    font-size: 1.8em;
+    padding: 0;
+    margin: 2em 2em 1.5em 0;
+  }
+  .contents p {
+    margin: 0 5em 2em 0;
+    font-size: 0.9em;
+  }
+  .contents .stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 2em 0;
+  }
+  .contents .stats .stat-item {
+    padding: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
